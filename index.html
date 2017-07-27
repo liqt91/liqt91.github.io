@@ -151,19 +151,19 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-first-article" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-macos下部署hexo博客框架" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/26/first-article/">first article</a>
+      <a class="article-title" href="/2017/07/26/macos下部署hexo博客框架/">macos上部署hexo</a>
     </h1>
   
 
         
-        <a href="/2017/07/26/first-article/" class="archive-article-date">
+        <a href="/2017/07/26/macos下部署hexo博客框架/" class="archive-article-date">
   	<time datetime="2017-07-26T09:23:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-26</time>
 </a>
         
@@ -178,22 +178,15 @@
 <p>供访问的静态html页面将存放在这个仓库中，我们将通过hexo这个工具生成静态网页并同步到这个仓库中，稍后会讲到。</p>
 <p>ps：二级域名必须为[github用户名]。</p>
 <h1 id="先介绍一下hexo"><a href="#先介绍一下hexo" class="headerlink" title="先介绍一下hexo"></a>先介绍一下hexo</h1><p>除了刚开始用作测试的index.thml之外，手动建立静态的html页面显然不实际。</p>
-<p>较为流行的方法是使用<code>hexo</code>来生成网站。</p>
-<p>生成的网站将全部由静态页面构成，适合用作个人博客。</p>
+<p>较为流行的方法是使用<code>hexo</code>来生成网站，生成的网站将全部由静态页面构成，适合用作个人博客。</p>
 <p>此外也可以用其他的方法建站，然后转换为静态页面。例如对于flask建立的网站，可以用flask-frozen插件转换为静态网站。</p>
 <p>这样将失去flask的后台，没有体现flask的优势，功能受限操作繁琐，而且跟hexo建立的静态网站没有太大差别，相比之下还是hexo更加合适。</p>
-<p>hexo是一个快速简洁高效的博客框架，它提供一个博客所需的基本功能，也可以通过插件的方式扩展功能。</p>
+<p>hexo作为一个快速简洁高效的博客框架，它提供一个博客所需的基本功能，也可以通过插件的方式扩展功能。</p>
 <p>它的博文支持markdown（或者其他渲染引擎）格式，因此你可以在本地编辑好markdown格式的文本之后通过简单的几行命令将博文发布到你的博客上去。</p>
 <p>虽然你的网站都是由静态页面构成的，但是hexo会帮你处理好所有链接关系。</p>
 <p>最后，hexo基于node.js，使用git发布，所以如果要使用的话需要先安装node.js和git。</p>
-<h1 id="node-js-和-git的安装"><a href="#node-js-和-git的安装" class="headerlink" title="node.js 和 git的安装"></a>node.js 和 git的安装</h1><ul>
-<li><p>node.js的安装很简单，只需要到官网下载对应的版本，一路确定即可。<br>如果安装过brew，那么可以通过命令行的方式来安装nodejs：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install node</div></pre></td></tr></table></figure>
-</li>
-<li><p>git的安装也很简单，只需要去官网下载对应版本安装即可。之后再配置一下用户名、邮箱和ssh，教程很多。<br>当然也可以使用brew来安装：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install git</div></pre></td></tr></table></figure>
-</li>
-</ul>
+<h1 id="node-js-和-git的安装"><a href="#node-js-和-git的安装" class="headerlink" title="node.js 和 git的安装"></a>node.js 和 git的安装</h1><p>node.js的安装很简单，只需要到官网下载对应的版本，一路确定即可。<br>如果安装过brew，那么可以通过命令行的方式来安装nodejs：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install node</div></pre></td></tr></table></figure></p>
+<p>git的安装也很简单，只需要去官网下载对应版本安装即可。之后再配置一下用户名、邮箱和ssh，教程很多。<br>当然也可以使用brew来安装：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install git</div></pre></td></tr></table></figure></p>
 <h1 id="hexo安装"><a href="#hexo安装" class="headerlink" title="hexo安装"></a>hexo安装</h1><p>安装好node.js 和git 之后，就可以通过npm这个nodejs的包管理工具安装hexo了。</p>
 <p>需要说明的是，npm的源因为某些原因访问速度很不理想，建议改用淘宝提供的cnpm分流作为包管理工具，cnpm的安装方式为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</div></pre></td></tr></table></figure></p>
 <p>之后在需要使用npm的地方用cnpm代替就可以了。</p>
@@ -228,7 +221,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/26/first-article/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/07/26/macos下部署hexo博客框架/">展开全文 >></a>
         </p>
       
 
